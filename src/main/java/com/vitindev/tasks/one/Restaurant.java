@@ -1,27 +1,6 @@
 package com.vitindev.tasks.one;
 
-public class Restaurant {
-
-    private final String name, cuisineType;
-    private final Address address;
-
-    public Restaurant(String name, String cuisineType, Address address) {
-        this.name = name;
-        this.cuisineType = cuisineType;
-        this.address = address;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getCuisineType() {
-        return cuisineType;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
+public record Restaurant(String name, String cuisineType, Address address) {
 
     public void showClass() {
         System.out.println("Name: " + name);

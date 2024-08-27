@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'org.example'
+group = 'com.vitindev'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,10 +10,6 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
-
-test {
-    useJUnitPlatform()
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
 }

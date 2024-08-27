@@ -1,7 +1,9 @@
 package com.vitindev.jobs.one.cinema;
 
 import com.vitindev.jobs.one.date.BasicDate;
+import lombok.Data;
 
+@Data
 public class TicketCinema {
 
     private final String name;
@@ -46,38 +48,6 @@ public class TicketCinema {
         return sessionHour < 16 ? (price * 10) / 100 : 0.0D;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public BasicDate getSessionDate() {
-        return sessionDate;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public int getSessionHour() {
-        return sessionHour;
-    }
-
-    public void setSessionHour(int sessionHour) {
-        this.sessionHour = sessionHour;
-    }
-
-    public int getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(int roomId) {
-        this.roomId = roomId;
-    }
-
     @Override
     public String toString() {
         return "TicketCinema{" +
@@ -88,4 +58,5 @@ public class TicketCinema {
                 ", roomId=" + roomId +
                 '}';
     }
+
 }
