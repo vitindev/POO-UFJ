@@ -5,7 +5,11 @@ import com.vitindev.tasks.three.employee.Employee;
 import com.vitindev.tasks.three.employee.Manager;
 import com.vitindev.tasks.three.form.Circle;
 import com.vitindev.tasks.three.form.Rectangle;
+import com.vitindev.tasks.three.payment.CardPayment;
+import com.vitindev.tasks.three.payment.Payment;
+import com.vitindev.tasks.three.payment.TicketPayment;
 
+import java.util.List;
 import java.util.Set;
 
 public class StartTaskThree {
@@ -38,6 +42,20 @@ public class StartTaskThree {
         );
 
         set.forEach(Employee::display);
+
+        // Atividade 4
+
+        final var list = List.of(
+                new CardPayment(50.0D, "0000 0000 0000 0000"),
+                new CardPayment(100.0D, "0000 0000 0000 0001"),
+                new TicketPayment(1660.0D, "1111-1111-1111-1111"),
+                new TicketPayment(5000.0D, "1111-1111-1111-1112")
+        );
+
+        list.forEach(payment -> {
+            payment.processPayment();
+            payment.displayValue();
+        });
 
     }
 
