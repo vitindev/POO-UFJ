@@ -1,6 +1,6 @@
-package com.vitindev.tasks.one;
+package com.vitindev.tasks.one_two;
 
-public class StartTaskOne {
+public class StartTaskOneAndTwo {
 
     public static void main(String[] args) {
 

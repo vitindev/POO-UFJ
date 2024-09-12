@@ -1,4 +1,4 @@
-package com.vitindev.tasks.one;
+package com.vitindev.tasks.one_two;
 
 public record University(String name, Address address, int foundingYear) {
 

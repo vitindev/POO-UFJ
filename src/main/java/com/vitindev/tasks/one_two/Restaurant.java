@@ -1,4 +1,4 @@
-package com.vitindev.tasks.one;
+package com.vitindev.tasks.one_two;
 
 public record Restaurant(String name, String cuisineType, Address address) {
 

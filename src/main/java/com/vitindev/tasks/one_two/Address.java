@@ -1,4 +1,4 @@
-package com.vitindev.tasks.one;
+package com.vitindev.tasks.one_two;
 
 public record Address(String street, String neighborhood, String city, String state, String postalCode) {
 
