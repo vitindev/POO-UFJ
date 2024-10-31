@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
 group = 'com.vitindev'
@@ -9,7 +11,34 @@ repositories {
     mavenCentral()
 }
 
+javafx {
+
+    version = "22"
+    modules = ['javafx.controls']
+
+}
+
 dependencies {
-    compileOnly 'org.projectlombok:lombok:1.18.28'
-    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    implementation 'org.openjfx:javafx-base:22'
+    implementation 'org.openjfx:javafx-controls:22'
+    implementation 'org.openjfx:javafx-graphics:22'
+    implementation 'org.openjfx:javafx-fxml:22'
+
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+    annotationProcessor 'org.projectlombok:lombok:1.18.34'
+}
+
+application {
+    mainClass = 'com.vitindev.jobs.two.view.ModelView'
+}
+
+run {
+    doFirst {
+        // Corrige o erro referenciando corretamente o module-path
+        jvmArgs = [
+                '--module-path', configurations.runtimeClasspath.asPath,
+                '--add-modules', 'javafx.controls'
+        ]
+    }
 }
